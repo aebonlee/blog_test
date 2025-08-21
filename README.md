@@ -1,10 +1,10 @@
-# blog_pro
+# Blog_Basic
 
 Vite로 구축된 React 기반 블로그 애플리케이션입니다.
 
 ## 프로젝트 개요
 
-- **이름**: blog_pro
+- **이름**: Blog_Basic
 - **버전**: 0.0.0
 - **타입**: ES Module
 - **프레임워크**: React 19.1.1
