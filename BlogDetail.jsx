@@ -43,7 +43,7 @@ function BlogDetail() {
   if (loading) return <p>로딩 중...</p>;
   if (!post) return <p>게시글을 찾을 수 없습니다.</p>;
 
-  // 5. JSX 렌더링
+  // 5. JSX 렌더링 
   return (
     <div>
       <h2>{post.title}</h2>
@@ -55,7 +55,7 @@ function BlogDetail() {
       <br />
 
       {/* 목록으로 돌아가기 링크 */}
-      <Link to="/posts">목록으로 돌아가기</Link>
+      <Link to="/posts"> 목록으로 돌아가기 </Link>
     </div>
   );
 }
