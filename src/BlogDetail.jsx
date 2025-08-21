@@ -11,16 +11,40 @@ function BlogDetail() {
 
   // 2. 데이터 가져오기 (useEffect)
   useEffect(() => {
+    // 테스트용 하드코딩 데이터
+    const testPosts = {
+      1: { id: 1, title: "첫 번째 블로그 포스트", body: "이것은 첫 번째 블로그 포스트의 내용입니다. React와 Vite를 사용해서 만든 블로그입니다." },
+      2: { id: 2, title: "React와 Vite로 블로그 만들기", body: "React와 Vite를 사용해서 현대적인 블로그를 만드는 방법을 알아보겠습니다." },
+      3: { id: 3, title: "GitHub Pages 배포하기", body: "GitHub Pages를 사용해서 React 앱을 무료로 배포하는 방법을 설명합니다." },
+      4: { id: 4, title: "CSS 모듈 사용법", body: "CSS 모듈을 사용해서 스타일 충돌 없이 컴포넌트를 스타일링하는 방법입니다." },
+      5: { id: 5, title: "React Router 설정하기", body: "React Router를 사용해서 SPA(Single Page Application)에서 라우팅을 구현하는 방법입니다." }
+    };
+    
+    setTimeout(() => {
+      const foundPost = testPosts[id];
+      if (foundPost) {
+        setPost(foundPost);
+      }
+      setLoading(false);
+    }, 300);
+
+    /*
     axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((res) => {
         setPost(res.data); // 성공 시 post 상태 업데이트
       })
       .catch(err => {
         console.error("데이터 로딩 실패:", err); // 에러 처리
+        // API 실패시 테스트 데이터 사용
+        const foundPost = testPosts[id];
+        if (foundPost) {
+          setPost(foundPost);
+        }
       })
       .finally(() => {
         setLoading(false); // 로딩 상태 종료
       });
+    */
   }, [id]); // id가 변경될 때마다 다시 데이터를 가져옴
 
   // 3. 삭제 처리 함수
